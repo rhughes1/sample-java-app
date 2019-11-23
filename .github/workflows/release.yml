@@ -22,4 +22,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       run: |
-        mvn  mvn deploy -Dserver.username=rhughes1 -Dserver.password=${GITHUB_TOKEN}
+        mvn deploy -Dserver.username=rhughes1 -Dserver.password=${GITHUB_TOKEN}
