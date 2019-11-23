@@ -4,7 +4,7 @@
   	<groupId>com.rhughes1</groupId>
   	<artifactId>sample-java-app</artifactId>
   	<packaging>jar</packaging>
-  	<version>1.0.0</version>
+  	<version>2.0.0</version>
   	<name>sample-java-app</name>
   	<url>http://maven.apache.org</url>
   	<properties>
