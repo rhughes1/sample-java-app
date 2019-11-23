@@ -11,7 +11,5 @@ This Java application is meant to showcase the basics of packaging an applicatio
 This project is built using Maven.
 
 ```
-mvn clean build
+mvn clean package
 ```
-
-This project can also be built using Docker.

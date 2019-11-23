@@ -2,8 +2,9 @@ name: Release
 
 on:
   push:
-    branches:    
-      - master 
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - master
 
 jobs:
   build:
@@ -20,6 +21,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Deploy to Github Package Registry
       env:
-        GITHUB_PACKAGE: ${{ secrets.PACKAGE_TOKEN }}
-      run: |
-        mvn deploy -Dserver.username=rhughes1 -Dserver.password=$GITHUB_PACKAGE
+        GITHUB_USERNAME: x-access-token
+        GITHUB_TOKEN: ${{ secrets.MAVEN_TOKEN }}
+      run:
+        mvn --settings settings.xml deploy
