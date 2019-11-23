@@ -2,8 +2,9 @@ name: Release
 
 on:
   push:
-    branches:    
-      - master 
+    # Sequence of patterns matched against refs/heads
+    branches-ignore:
+      - master
 
 jobs:
   build:
@@ -22,4 +23,4 @@ jobs:
       env:
         GITHUB_PACKAGE: ${{ secrets.PACKAGE_TOKEN }}
       run: |
-        mvn deploy -Dserver.username=rhughes1 -Dserver.password=$GITHUB_PACKAGE
+        mvn deploy -Dserver.username=rhughes1 -Dserver.password=4dde3d3b99249ad788a5ef6597382e6b1a06218e
