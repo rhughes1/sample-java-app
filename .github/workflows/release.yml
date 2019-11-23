@@ -20,6 +20,6 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Deploy to Github Package Registry
       env:
-        GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+        GITHUB_PACKAGE: ${{ secrets.PACKAGE_TOKEN }}
       run: |
-        mvn deploy -Dserver.username=rhughes1 -Dserver.password=${GITHUB_TOKEN}
+        mvn deploy -Dserver.username=rhughes1 -Dserver.password=$GITHUB_PACKAGE
