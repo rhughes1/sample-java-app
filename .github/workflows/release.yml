@@ -22,6 +22,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       run: |
-        mkdir ~/.m2
-        echo "<settings><servers><server><id>github</id><username>rhughes1</username><password>${PACKAGE_TOKEN}</password></server></servers></settings>" > ~/.m2/settings.xml
-        mvn deploy
+        mvn  mvn deploy -Dserver.username=rhughes1 -Dserver.password=${GITHUB_TOKEN}
