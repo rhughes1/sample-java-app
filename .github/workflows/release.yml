@@ -25,7 +25,3 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.MAVEN_TOKEN }}
       run:
         mvn --settings settings.xml deploy
-      env:
-        MAVEN_PACKAGE: ${{ secrets.MAVEN_TOKEN }}
-      run: |
-        mvn deploy -Dserver.username=rhughes1 -Dserver.password=${MAVEN_PACKAGE}
